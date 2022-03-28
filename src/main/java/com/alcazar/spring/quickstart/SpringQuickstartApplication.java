@@ -19,7 +19,7 @@ public class SpringQuickstartApplication {
 
 		// get applicationContext
 		ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coach c = (Coach)appCtx.getBean("baseballCoach");
+		Coach c = appCtx.getBean("baseballCoach", BaseballCoach.class);
 		System.out.println(c.getDailyWorkout());
 
 
