@@ -7,9 +7,15 @@
 
     <bean id="trackCoach" class="com.alcazar.spring.quickstart.TrackCoach">
         <constructor-arg index="0" value="Go and hit that hawt shit!"/>
+        <constructor-arg index="1" ref="fortuneService"/>
     </bean>
 
     <bean id="baseballCoach" class="com.alcazar.spring.quickstart.BaseballCoach">
+        <constructor-arg index="0" ref="fortuneService"/>
         <property name="dailyWorkout" value="Hochimunsit, onesit!" />
     </bean>
+
+    <bean id="fortuneService" class="com.alcazar.spring.quickstart.FortuneServiceImpl"/>
+
+
 </beans>

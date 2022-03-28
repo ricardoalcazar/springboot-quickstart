@@ -4,13 +4,15 @@ public class TrackCoach implements Coach{
 
     /** instance variables */
     private String dailyWorkout;
+    private FortuneService fs;
 
     /**
      * Default constructor
      */
 
-    public TrackCoach(String dailyWorkout){
+    public TrackCoach(String dailyWorkout, FortuneService fs){
         this.dailyWorkout = dailyWorkout;
+        this.fs = fs;
     }
 
     public void setDailyWorkout(String dailyWorkout) {
@@ -19,6 +21,10 @@ public class TrackCoach implements Coach{
 
     public String getDailyWorkout(){
         return dailyWorkout;
+    }
+
+    public String getFortune(){
+        return fs.getFortune();
     }
 
 }

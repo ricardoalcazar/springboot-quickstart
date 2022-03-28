@@ -1,8 +1,7 @@
 package com.alcazar.spring.quickstart;
 
-public interface Coach {
+public interface FortuneService {
 
-    public String getDailyWorkout();
     public String getFortune();
 
 }

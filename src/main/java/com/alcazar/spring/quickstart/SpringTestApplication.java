@@ -11,8 +11,11 @@ public class SpringTestApplication {
         ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("applicationContext.xml");
         Coach c = appCtx.getBean("baseballCoach", BaseballCoach.class);
         System.out.println(c.getDailyWorkout());
+        System.out.println(c.getFortune());
+
         c = appCtx.getBean("trackCoach", TrackCoach.class);
         System.out.println(c.getDailyWorkout());
+        System.out.println(c.getFortune());
 
         appCtx.close();
 
