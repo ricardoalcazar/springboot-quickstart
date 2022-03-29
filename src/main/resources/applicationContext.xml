@@ -10,6 +10,13 @@
         <constructor-arg index="1" ref="fortuneService"/>
     </bean>
 
+    <bean id="trackCoach2" class="com.alcazar.spring.quickstart.TrackCoach">
+        <property name="dailyWorkout" value="Hit that blonde shit!" />
+        <property name="fortuneService" ref="fortuneService" />
+        <property name="emailAddress" value="ricardo.alcazar@chamberlain.com"/>
+        <property name="team" value="Rush Soccer"/>
+    </bean>
+
     <bean id="baseballCoach" class="com.alcazar.spring.quickstart.BaseballCoach">
         <constructor-arg index="0" ref="fortuneService"/>
         <property name="dailyWorkout" value="Hochimunsit, onesit!" />
