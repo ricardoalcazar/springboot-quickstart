@@ -59,4 +59,13 @@ public class TrackCoach implements Coach{
     public void setTeam(String team) {
         this.team = team;
     }
+
+
+    public void init(){
+        System.out.println("TrackCoach.init() Hitting that blonde pussy!");
+    }
+
+    public void destroy(){
+        System.out.println("TrackCoach.destroy() Finishing that blonde.");
+    }
 }

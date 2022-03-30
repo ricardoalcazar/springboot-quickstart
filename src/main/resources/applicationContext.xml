@@ -4,17 +4,24 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
   http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
+    <!-- PROPERTIES -->
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="location">
+            <value>classpath:sport.properties</value>
+        </property>
+    </bean>
 
+    <!-- BEANS -->
     <bean id="trackCoach" class="com.alcazar.spring.quickstart.TrackCoach">
         <constructor-arg index="0" value="Go and hit that hawt shit!"/>
         <constructor-arg index="1" ref="fortuneService"/>
     </bean>
 
     <bean id="trackCoach2" class="com.alcazar.spring.quickstart.TrackCoach">
-        <property name="dailyWorkout" value="Hit that blonde shit!" />
+        <property name="dailyWorkout" value="${demo.hawt}" />
         <property name="fortuneService" ref="fortuneService" />
-        <property name="emailAddress" value="ricardo.alcazar@chamberlain.com"/>
-        <property name="team" value="Rush Soccer"/>
+        <property name="emailAddress" value="${demo.emailAddress}"/>
+        <property name="team" value="${demo.team}"/>
     </bean>
 
     <bean id="baseballCoach" class="com.alcazar.spring.quickstart.BaseballCoach">
